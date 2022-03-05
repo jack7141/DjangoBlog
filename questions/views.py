@@ -17,10 +17,9 @@ from rest_framework.views import APIView
 from rest_framework.generics import (
     ListAPIView, 
     CreateAPIView, 
-    DestroyAPIView, 
-    UpdateAPIView,
     RetrieveUpdateDestroyAPIView
 )
+
 from .models import Question 
 # Create
 class CreateQuestionAPIView(CreateAPIView):
@@ -42,8 +41,9 @@ class ListQuestionAPIView(ListAPIView):
     serializer_class = QuestionSerializer
 
     # 검색
+    # title, body 내부에서 포함된 키워드 모두 검색
     filter_backends = [SearchFilter]
-    search_fields = ('title',)
+    search_fields = ('title','body',)
 
 class DetailQuestionAPIView(RetrieveUpdateDestroyAPIView):
     """
@@ -58,7 +58,7 @@ class DetailQuestionAPIView(RetrieveUpdateDestroyAPIView):
     """
 
     queryset = Question.objects.all()
-    lookup_field = "title"
+    lookup_field = "pk"
     serializer_class = QuestionSerializer
     # permission_classes = [IsAuthenticatedOrReadOnly, IsOwnerOrReadOnly]
 
@@ -72,8 +72,8 @@ class ListCommentAPIView(APIView):
 
     # permission_classes = [IsAuthenticatedOrReadOnly]
 
-    def get(self, request, title):
-        question = Question.objects.get(title=title)
+    def get(self, request, pk):
+        question = Question.objects.get(pk=pk)
         comments = Reviews.objects.filter(question=question)
         serializer = ReviewSerializer(comments, many=True)
         return Response(serializer.data, status=200)

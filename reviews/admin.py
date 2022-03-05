@@ -8,7 +8,8 @@ class QuestionAdmin(admin.ModelAdmin):
     list_display = (
         "question",
         "author",
-        'body'
+        'body',
+        'is_like',
     )
 
     list_filter = (

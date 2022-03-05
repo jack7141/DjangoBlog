@@ -8,6 +8,8 @@ class QuestionAdmin(admin.ModelAdmin):
     list_display = (
         "author",
         "title",
+        "body",
+        'total_like',
     )
 
     # list_filter = (
