@@ -23,7 +23,10 @@
 
     자세한 명시는 Swagger를 통하여 :8000번 포트에서 확인 할 수 있습니다.
     - http://127.0.0.1:8000/
-    
+
+    * Header Token 주의사항
+    Django에서 주어지는 API UI로 처리할 시 superuser로 처리하게끔 되어있습니다.
+
 
  * Questions URL
 
