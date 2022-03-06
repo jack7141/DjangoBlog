@@ -10,6 +10,7 @@
 
 👤 **Superuser ID**
 * admin
+
 👤 **Superuser password**
 * 0000
 
