@@ -10,5 +10,10 @@ class Reviews(core_model.TimeStampedModel):
     body = models.TextField()
     is_like = models.BooleanField(null=True, default=False)
 
+    def __str__(self):
+        return str(self.question)
+
     class Meta:
         ordering = ["-created", "-updated"]
+
+    

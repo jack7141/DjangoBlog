@@ -9,6 +9,6 @@ class CustomUserAdmin(admin.ModelAdmin):
     """ Custom User Admin """
     list_display = (
         "username",
-        "email",
+        "password",
         # 토큰 정보 추가하면 좋을듯
     )

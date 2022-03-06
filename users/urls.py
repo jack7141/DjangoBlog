@@ -5,6 +5,7 @@ from . import views
 app_name = "users"
 
 urlpatterns = [
-    path("", views.ListTodoAPIView.as_view(), name="todo_list"),
-    path("create/", views.CreateTodoAPIView.as_view(), name="todo_create"),
+    path("", views.ListUserAPIView.as_view(), name="user_list"),
+    path("signup/", views.UserCreateAPIView.as_view(), name="user_create"),
+    path("signin/", views.UserLoginAPIView.as_view(), name="user_login"),
 ]
