@@ -8,6 +8,11 @@
 
 👤 **황광회**
 
+👤 **Superuser ID**
+* admin
+👤 **Superuser password**
+* 0000
+
 ## ⭐️ To get started with project, run the following in a virtual environment:
 > venv\Scripts\activate.bat
 
