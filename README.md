@@ -37,6 +37,9 @@
 
 
  * Questions URL
+    ## Search
+    
+    /questions/?search=키워드
 
     ## Method [GET] : 질문에 관한 전체 리스트를 Return합니다.
 
