@@ -2,7 +2,6 @@
 <p>
 </p>
 
-> AIFFEL Coding Test
 
 ## Author
 
