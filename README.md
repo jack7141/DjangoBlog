@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to Djang 👋</h1>
+<h1 align="center">Welcome to DjangoBlog 👋</h1>
 <p>
 </p>
 
