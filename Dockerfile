@@ -1,9 +1,8 @@
 FROM python:3.7.7
 
-WORKDIR /usr/src/app
-## Install packages
+WORKDIR /webapp/server
 COPY requirements.txt ./
-RUN pip install -r requirements.txtw
+RUN pip install -r requirements.txt
 
 COPY . .
 
