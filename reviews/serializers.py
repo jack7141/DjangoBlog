@@ -1,4 +1,4 @@
-# app이름/serializer.py 생성
+
 from turtle import title
 from rest_framework import serializers # serializer import
 from .models import Reviews
